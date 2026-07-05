@@ -6,6 +6,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  font-size: 18px;
+
   background: #fff;
 }
 
@@ -32,6 +34,26 @@ a {
 .nav a {
   color: #fff;
   font-size: 16px;
+}
+.btn--primary {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: #0f2942;
+  color: #fff;
+  padding: 16px 34px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.btn--secondary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #111;
 }
 
 .header {
@@ -71,7 +93,6 @@ a {
   font-size: 16px;
   line-height: 100%;
   color: #fff;
-  margin-top: 20px;
 }
 
 .header__btn {
@@ -183,6 +204,7 @@ a {
 
 .hero {
   padding: 70px 0;
+  margin-bottom: 80px;
 }
 
 .hero__inner {
@@ -221,24 +243,9 @@ a {
   margin-bottom: 45px;
 }
 
-.hero__btn {
-  text-decoration: none;
-  font-weight: 600;
-}
 
-.hero__btn--primary {
-  background: #0f2942;
-  color: #fff;
-  padding: 16px 34px;
-  border-radius: 8px;
-}
 
-.hero__btn--secondary {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #111;
-}
+
 
 .hero__play {
   width: 42px;
@@ -420,7 +427,7 @@ a {
   margin-left: 0;
 }
 
- @media (max-width: 992px) {
+@media (max-width: 992px) {
   .hero {
     padding: 50px 0;
   }
@@ -464,46 +471,43 @@ a {
     max-width: 360px;
     height: auto;
   }
-  
 }
 
 @media (max-width: 768px) {
+  .hero__title {
+    font-size: 34px;
+  }
 
-    .hero__title {
-        font-size: 34px;
-    }
+  .hero__text {
+    font-size: 16px;
+  }
 
-    .hero__text {
-        font-size: 16px;
-    }
+  .hero__buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .hero__buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .hero__image {
+    flex-direction: column;
+  }
 
-    .hero__image {
-        flex-direction: column;
-    }
+  .hero__cards {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+  }
 
-    .hero__cards {
-        position: static;
-        transform: none;
-        width: 100%;
-        margin-bottom: 20px;
-        align-items: center;
-    }
+  .hero__card {
+    width: 220px;
+  }
 
-    .hero__card {
-        width: 220px;
-    }
-
-    .hero__item {
-        width: 100%;
-        max-width: 360px;
-        height: auto;
-    }
-
+  .hero__item {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
 
   .hero__btn--primary {
     padding: 12px 18px;
@@ -526,28 +530,138 @@ a {
   .users {
     display: none;
   }
-  .hero__buttons{
+  .hero__buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 16px;
     flex-wrap: nowrap;
-}
+  }
 
-.hero__btn--primary{
+  .hero__btn--primary {
     padding: 12px 18px;
     font-size: 12px;
-}
+  }
 
-.hero__btn--secondary{
+  .hero__btn--secondary {
     gap: 8px;
     font-size: 12px;
-}
+  }
 
-.hero__play{
+  .hero__play {
     width: 28px;
     height: 28px;
     font-size: 11px;
+  }
 }
-} 
+
+.about {
+  margin-bottom: 80px;
+  
+}
+.about .container{
+  position: relative;;
+}
+.about__circle{
+  position: absolute;
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 6px solid #052A44;
+  background-color: transparent;
+  left: 0;
+  bottom: 15px;
+}
+.about__inner {
+  padding: 0 40px;
+}
+
+.about__content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about__title {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 60px;
+}
+
+.about__text {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.about__items {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about__item {
+  position: relative;
+  max-width: 371px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 70px 32px;
+  text-align: center;
+  box-shadow: 2px 4px 38px rgba(0, 0, 0, 0.08);
+}
+
+.about__item--title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.about__item--text {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.about__item--icon {
+  position: absolute;
+  height: 71px;
+  width: 71px;
+  border-radius: 50%;
+  background-color: #052a44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 0;
+}
+
+.about__item--icon img {
+  width: 23px;
+  height: 32px;
+}
+
+.about__btn {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 860px) {
+  .about__inner {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__items {
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+  }
+  .about__circle{
+    display: none;
+  }
+}
